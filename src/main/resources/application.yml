@@ -6,7 +6,7 @@ server:
 # spring 配置
 spring:
   profiles:
-    active: pro
+    active: test
     
 ---
 spring: 
@@ -15,7 +15,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/small
     username: root
-    password: p@ssw0rd
+    password: PASSWORD
 #  jersey: 
 #    application-path: /rest
     
@@ -44,7 +44,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://47.95.218.214:3306/small
     username: root
-    password: p@ssw0rd@mysql
+    password: PASSWORD
 #  jersey: 
 #    application-path: /rest
     
