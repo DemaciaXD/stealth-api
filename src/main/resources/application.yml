@@ -1,0 +1,71 @@
+# tomcat 配置
+server: 
+  port: 8080
+  context-path: /small
+  
+# spring 配置
+spring:
+  profiles:
+    active: pro
+    
+---
+spring: 
+  profiles: test
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/small
+    username: root
+    password: p@ssw0rd
+#  jersey: 
+#    application-path: /rest
+    
+# REDIS (RedisProperties)
+# Redis数据库索引（默认为0）
+  redis:  
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    pool: 
+      connectionTimeout: 5000
+      soTimeout: 5000
+      max-active: 1024
+      max-idle: 200
+      min-idle: 8
+      max-wait: 1000
+      timeout: 10000
+      
+mybatis:
+    mapperLocations: classpath:mapper/*.xml
+      
+---
+spring: 
+  profiles: pro
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.95.218.214:3306/small
+    username: root
+    password: p@ssw0rd@mysql
+#  jersey: 
+#    application-path: /rest
+    
+# REDIS (RedisProperties)
+# Redis数据库索引（默认为0）
+  redis:  
+    database: 0
+    host: 47.95.218.214
+    port: 6379
+    pool: 
+      connectionTimeout: 5000
+      soTimeout: 5000
+      max-active: 1024
+      max-idle: 200
+      min-idle: 8
+      max-wait: 1000
+      timeout: 10000
+      
+mybatis:
+    mapperLocations: classpath:mapper/*.xml
+
+spring.thymeleaf.content-type: text/html
+spring.thymeleaf.cache: false
+spring.thymeleaf.mode: LEGACYHTML5

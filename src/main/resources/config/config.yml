@@ -1,0 +1,4 @@
+# 自定义常量
+small.appid: wx5b941caa60e12535
+small.secret: 76545a86854ccbb81923998098b77908
+small.grant_type: authorization_code
